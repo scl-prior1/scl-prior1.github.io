@@ -17,6 +17,13 @@ function make_slides(f) {
      }
   });
 
+  slides.instructions1 = slide({
+    name : "instructions1",
+    button : function() {
+      exp.go(); //use exp.go() if and only if there is no "present" data.
+    }
+  });
+  
   slides.causalPrior = slide({
     name : "causalPrior",
     button : function() {
@@ -397,6 +404,7 @@ function init() {
     exp.structure=[
       "i0",
       "botcaptcha",
+      "instructions1",
       "causalPrior",
       "causalMatrix",
       "instructionsH",
